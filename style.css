@@ -1,0 +1,208 @@
+:root{
+    /*Tema Claro*/
+    --claro-color-primario: #18515B;
+    --claro-texto-primario: white;
+    --claro-color-secundario: #006D77;
+    --claro-texto-secundario: #1B2021;
+    --claro-color-acento: #00636C;
+    --claro-color-hover: #006D77;
+
+
+    /*Tema Oscuro*/
+    --oscuro-color-primario: #6E1423;
+    --oscuro-texto-primario: #929595;
+    --oscuro-color-secundario: #A11D33;
+    --oscuro-texto-secundario: #30343F;
+    --oscuro-color-acento: #DA1E37;
+    --oscuro-color-hover: #E01E37;
+}
+
+/*uso de variables segun el tema*/
+body.tema-claro{
+    --color-primario: var(--claro-color-primario);
+    --texto-primario: var(--claro-texto-primario);
+    --color-secundario: var(--claro-color-secundario);
+    --texto-secundario: var(--claro-texto-secundario);
+    --color-acento: var(--claro-color-acento);
+    --color-hover: var(--claro-color-hover);
+}
+
+body.tema-oscuro{
+    --color-primario: var(--oscuro-color-primario);
+    --texto-primario: var(--oscuro-texto-primario);
+    --color-secundario: var(--oscuro-color-secundario);
+    --texto-secundario: var(--oscuro-texto-secundario);
+    --color-acento: var(--oscuro-color-acento);
+    --color-hover: var(--oscuro-color-hover);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0; 
+    background-color: var(--texto-primario);
+    color: var(--color-primario);
+    line-height: 1.6;
+}
+
+header{
+    text-align:center;
+    background-color: var(--texto-primario);
+    color: var(--color-primario);
+    padding: 20px;
+}
+
+section{
+    border: 1px solid var(--color-primario);
+    background-color: var(--texto-primario);
+    border-radius: 15px;
+    padding: 15px;
+    margin: 20px;
+}
+
+h2{
+    color: var(--color-primario);
+    text-align: center;
+}
+
+p{
+    color: var(--texto-secundario);
+    text-align: center;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding: 10px 20px;
+    background-color: var(--color-secundario); 
+}
+
+.nav-link, .boton-tema{
+    text-decoration: none;
+    color:var(--texto-primario);
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.nav-link:hover, .boton-tema:hover{
+    color: var(--texto-primario);
+}
+
+/*cartas*/
+.conocelos{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    height: 600px;
+    justify-content: space-around;
+    text-align: center;
+    gap: 20px;
+}
+
+.discografia{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    height: 600px;
+    justify-content: space-around;
+    text-align: center;
+    gap: 20px;
+}
+
+.premios{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    height: 600px;
+    justify-content: space-around;
+    text-align: center;
+    gap: 20px;
+}
+
+.tours{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    height: 600px;
+    justify-content: space-around;
+    text-align: center;
+    gap: 20px;  
+}
+
+.redes{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    height: 600px;
+    justify-content: space-around;
+    text-align: center;
+    gap: 20px;
+}
+
+.card{
+    background-color: var(--texto-primario);
+    color: var(--texto-secundario);
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.card:hover{
+    transform: scale(1.05);
+    background-color: var(--texto-secundario);
+}
+
+.carta-hover:hover{
+    transform: rotate(30deg) scale(1.1);
+}
+
+.card:nth-child(1){
+    align-self: flex-end;
+}
+
+.card:nth-child(2){
+    align-self: flex-end;
+}
+
+.card:nth-child(3){
+    order: -1;
+}
+
+.card:nth-child(4){
+    order: -1;
+}
+
+.card:nth-child(5){
+    order: -1;
+}
+
+/*formulario*/
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 400px;
+    margin: none;
+}
+
+button{
+    background-color: var(--color-acento);
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: var(--color-hover);
+}
