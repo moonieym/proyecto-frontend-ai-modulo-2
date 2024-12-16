@@ -150,7 +150,7 @@ header{
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 500px; /* Altura del contenedor */
+    height: 150px; /* Altura del contenedor */
     overflow: hidden;
 }
 

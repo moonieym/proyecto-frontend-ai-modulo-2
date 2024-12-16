@@ -24,3 +24,19 @@ botonTema.addEventListener("click", () => {
     // Actualizar el ícono
     actualizarIcono();
 });
+
+// Seleccionamos el video y el botón
+const video = document.getElementById('promoVideo');
+const muteButton = document.getElementById('muteButton');
+
+// Agregamos un evento de clic al botón
+muteButton.addEventListener('click', () => {
+    if (video.muted) {
+        video.muted = false;
+        muteButton.textContent = 'Silenciar';
+    } else {
+        video.muted = true;
+        muteButton.textContent = 'Quitar Mute';
+    }
+});
+
