@@ -64,7 +64,7 @@ html{
 
 header{
     text-align:center;
-    background-color: var(--texto-primario);
+    background-color: rgba(0, 0, 0, 0.5);
     color: var(--color-primario);
     padding: 1rem 0;
     position: sticky;
@@ -74,22 +74,109 @@ header{
 
 .navbar{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     list-style: none;
     padding: .5rem 1rem;
     background-color: var(--color-secundario); 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 10;
 }
 
 .nav-link, .boton-tema{
     text-decoration: none;
     color: var(--texto-primario);
     font-weight: bold;
+    padding: .5rem 1rem;
     cursor: pointer;
-    transition: color 0.3s;
+    transition: color 0.3s ease;
 }
 
 .nav-link:hover, .boton-tema:hover{
     color: var(--texto-primario);
+}
+
+/*submenus*/
+.dropdown{
+    position: relative;
+}
+
+.dropdown-menu{list-style: none;
+    position: absolute;
+    top: 100%; /* Debajo del menú padre */
+    left: 0;
+    background-color: #fff;
+    display: none; /* Oculto por defecto */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+    min-width: 150px;
+}
+
+.dropdown-link {
+    text-decoration: none;
+    color: #000;
+    padding: 10px 15px;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-link:hover {
+    background-color: #f0f0f0;
+}
+
+/* Mostrar submenú al hacer hover */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Estilos para los botones de iconos */
+.icon-button {
+    background: none; /* Sin fondo */
+    border: none; /* Sin bordes */
+    color: var(--texto-primario); /* Color del texto o icono */
+    cursor: pointer; /* Cambia el cursor a una mano */
+    font-size: 24px; /* Tamaño del icono */
+    transition: color 0.3s ease; /* Transición suave al pasar el mouse */
+}
+
+.icon-button:hover {
+    color: var(--color-hover); /* Cambia de color al pasar el mouse */
+}
+
+/* Video de fondo en el header */
+.video-section {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 500px; /* Altura del contenedor */
+    overflow: hidden;
+}
+
+.video-section video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Hace que el video ocupe todo el espacio del header sin distorsionarse */
+}
+
+/* Botón para quitar el mute */
+.mute-button {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.mute-button:hover {
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 /*tarjetas flex*/
@@ -132,7 +219,6 @@ form-horizontal{
     max-width: 100%;
     margin: 20px auto;
 }
-
 /*boton*/
 button{
     background-color: var(--color-acento);
