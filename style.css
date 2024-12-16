@@ -46,14 +46,15 @@ html, body{
     height: 100vh;
 }
 
-body{
+body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: var(--texto-primario);
     color: var(--color-primario);
     line-height: 1.5;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start; /* Cambia de space-between a flex-start */
+    padding-top: 100px; /* Si usas header fijo, asegura espacio suficiente para el contenido */
 }
 
 /*header*/
@@ -62,15 +63,14 @@ html{
     font-size: 1rem; /*1rem = 20px*/
 }
 
-header{
-    text-align:center;
+header {
+    text-align: center;
     background-color: rgba(0, 0, 0, 0.5);
     color: var(--color-primario);
     padding: 1rem 0;
     position: sticky;
     top: 0;
-    z-index: 1000;
-    height: 100px;
+    z-index: 20; /* Mantén un valor más bajo si es necesario */
 }
 
 .navbar{
@@ -82,7 +82,7 @@ header{
     background-color: var(--color-secundario); 
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     position: relative;
-    z-index: 10;
+    z-index: auto;
 }
 
 .nav-link, .boton-tema{
@@ -98,40 +98,60 @@ header{
     color: var(--texto-primario);
 }
 
-.video-section {
-    position: relative;
+/* Estilos generales */
+.integrantes {
+    text-align: center;
+    margin: 2rem 0;
+    padding: 1rem;
+    background-color: #f9f9f9; /* Fondo gris claro */
+}
+
+.categoria {
     display: flex;
     justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 30vh !important; /* Asegúrate de que la altura prevalezca */
-    overflow: hidden;
-    background-color: var(--color-primario);
+    flex-wrap: wrap; /* Permite que se acomoden si hay muchas imágenes */
+    gap: 2rem; /* Espacio entre imágenes */
 }
 
-.video-section video {
-    width: 100%; /* Ocupa todo el ancho del contenedor */
-    height: 100%; /* Ajusta su altura al contenedor */
-    object-fit: cover; /* Cubre el espacio sin deformarse */
+.item {
+    text-align: center;
 }
 
-/* Botón para quitar el mute */
-.mute-button {
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    padding: 10px 15px;
-    background-color: rgba(0, 0, 0, 0.7);
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 14px;
-    transition: background-color 0.3s ease;
+.item img {
+    width: 150px; /* Tamaño de la imagen */
+    height: 150px;
+    object-fit: cover; /* Recorta la imagen sin deformarla */
+    border-radius: 50%; /* Hace la imagen circular */
+    border: 3px solid #ddd; /* Borde sutil */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: transform 0.3s ease-in-out; /* Animación al pasar el cursor */
 }
 
-.mute-button:hover {
-    background-color: rgba(0, 0, 0, 0.5);
+.item img:hover {
+    transform: scale(1.1); /* Efecto de zoom al pasar el cursor */
+}
+
+.item p {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Estilo para la imagen con borde cuadrado */
+.discografia, .premios, .tours{
+    text-align: center;
+    background-color: #f9f9f9; /* Fondo gris claro */
+}
+
+.imagen-tema {
+    width: 100%; /* Para que ocupe el 100% del contenedor */
+    max-width: 600px; /* Limita el tamaño máximo */
+    border: 3px solid #ddd; /* Borde sutil */
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil para darle un efecto de profundidad */
+    border-radius: 8px; /* Bordes ligeramente redondeados (opcional) */
+    margin-top: 20px;
 }
 
 /*tarjetas flex*/
@@ -165,26 +185,9 @@ header{
     background-color: var(--texto-secundario);
 }
 
-/*formulario*/
-form-horizontal{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    width: 400px;
-    max-width: 100%;
-    margin: 20px auto;
-}
-/*boton*/
-button{
-    background-color: var(--color-acento);
-    border: none;
-    border-radius: 5px;
+footer{
+    text-align: center;
     padding: 10px;
-    cursor: pointer;
-}
-
-button:hover{
-    background-color: var(--color-hover);
 }
 
 /* Media Queries para Responsividad */
