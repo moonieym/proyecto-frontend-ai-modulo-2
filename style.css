@@ -139,7 +139,7 @@ header {
 }
 
 /* Estilo para la imagen con borde cuadrado */
-.discografia, .premios, .tours{
+.tours{
     text-align: center;
     background-color: #f9f9f9; /* Fondo gris claro */
 }
@@ -170,7 +170,7 @@ header {
     gap: 40px;
 }
 
-.integrantes, .discografia, .premios, .tours, .redes{
+.integrantes, .tours{
     background-color: var(--color-secundario);
     color: var(--texto-primario);
     border-radius: 8px;
@@ -185,10 +185,6 @@ header {
     background-color: var(--texto-secundario);
 }
 
-footer{
-    text-align: center;
-    padding: 10px;
-}
 
 /* Media Queries para Responsividad */
 @media (min-width: 770px) {
