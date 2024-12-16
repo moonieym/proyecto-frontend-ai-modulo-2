@@ -42,51 +42,47 @@ body.tema-oscuro{
     box-sizing: border-box;
 }
 
+html, body{
+    height: 100vh;
+}
+
 body{
     font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
-    padding: 0; 
     background-color: var(--texto-primario);
     color: var(--color-primario);
-    line-height: 1.6;
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/*header*/
+
+html{
+    font-size: 1rem; /*1rem = 20px*/
 }
 
 header{
     text-align:center;
     background-color: var(--texto-primario);
     color: var(--color-primario);
-    padding: 20px;
-}
-
-section{
-    border: 1px solid var(--color-primario);
-    background-color: var(--texto-primario);
-    border-radius: 15px;
-    padding: 15px;
-    margin: 20px;
-}
-
-h2{
-    color: var(--color-primario);
-    text-align: center;
-}
-
-p{
-    color: var(--texto-secundario);
-    text-align: center;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .navbar{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     list-style: none;
-    padding: 10px 20px;
+    padding: .5rem 1rem;
     background-color: var(--color-secundario); 
 }
 
 .nav-link, .boton-tema{
     text-decoration: none;
-    color:var(--texto-primario);
+    color: var(--texto-primario);
     font-weight: bold;
     cursor: pointer;
     transition: color 0.3s;
@@ -96,27 +92,25 @@ p{
     color: var(--texto-primario);
 }
 
-/*flex en secciones*/
-section{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+/*tarjetas flex*/
+.ateez{
+    text-align: center;
+    padding: 20px;
 }
 
-/*tarjetas flex*/
-.conocelos, .discografia, .premios, .tours, .redes{
+.carrera{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     height: 600px;
     justify-content: space-around;
-    text-align: center;
-    gap: 20px;
+    align-items: center;
+    gap: 40px;
 }
 
-.card{
-    background-color: var(--texto-primario);
-    color: var(--texto-secundario);
+.integrantes, .discografia, .premios, .tours, .redes{
+    background-color: var(--color-secundario);
+    color: var(--texto-primario);
     border-radius: 8px;
     padding: 20px;
     text-align: center;
@@ -130,7 +124,7 @@ section{
 }
 
 /*formulario*/
-form{
+form-horizontal{
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -153,30 +147,15 @@ button:hover{
 }
 
 /* Media Queries para Responsividad */
-@media (max-width: 768px) {
+@media (min-width: 770px) {
     .navbar{
-        flex-direction: column;
-        align-items: center;
+        flex-direction: row;
     }
 
-    .card{
-        width: 80%;
-    }
-
-    header, footer, main{
-        padding: 10px;
-    }
-    
-    form{
-        width: 90%;
-        margin: 20px;
+    .carrera{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2rem;
     }
 }
-
-@media (max-width: 480px) {
-    .navbar{
-        flex-direction: column;
-    }
-
-    .card
-    

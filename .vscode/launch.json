@@ -4,12 +4,14 @@
     // Para más información, visite: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
+        
         {
-            "type": "chrome",
+            "type": "firefox",
             "request": "launch",
-            "name": "Iniciar Chrome para localhost",
-            "url": "http://localhost:8080",
+            "reAttach": true,
+            "name": "Launch localhost",
+            "url": "http://localhost/index.html",
             "webRoot": "${workspaceFolder}"
-        }
+        },
     ]
 }
