@@ -4,12 +4,11 @@
     // Para más información, visite: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-        
         {
-            "type": "firefox",
+            "name": "Open in microsoft-edge",
+            "type": "microsoft-edge",
             "request": "launch",
             "reAttach": true,
-            "name": "Launch localhost",
             "url": "http://localhost/index.html",
             "webRoot": "${workspaceFolder}"
         },
