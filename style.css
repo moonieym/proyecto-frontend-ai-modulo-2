@@ -50,7 +50,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: var(--texto-primario);
     color: var(--color-primario);
-    line-height: 1.5;
+    line-height: 2;
     display: flex;
     flex-direction: column;
     justify-content: flex-start; /* Cambia de space-between a flex-start */
@@ -109,7 +109,7 @@ video {
 /* Estilos generales */
 .conocelos {
     text-align: center;
-    margin: 2rem 0;
+    margin: 0rem 0;
     padding: 1rem;
     background-color: #f9f9f9; /* Fondo gris claro */
 }
@@ -125,9 +125,19 @@ video {
     text-align: center;
 }
 
-.item img {
-    width: 150px; /* Tamaño de la imagen */
-    height: 150px;
+.conocelos img {
+    width: 160px; /* Tamaño de la imagen */
+    height: 160px;
+    object-fit: cover; /* Recorta la imagen sin deformarla */
+    border-radius: 50%; /* Hace la imagen circular */
+    border: 3px solid #ddd; /* Borde sutil */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: transform 0.3s ease-in-out; /* Animación al pasar el cursor */
+}
+
+.albumes img {
+    width: 170px; /* Tamaño de la imagen */
+    height: 170px;
     object-fit: cover; /* Recorta la imagen sin deformarla */
     border-radius: 5%; /* Hace la imagen circular */
     border: 3px solid #ddd; /* Borde sutil */
@@ -178,7 +188,7 @@ video {
     gap: 40px;
 }
 
-.conocelos, .tours{
+.conocelos, .albumes, .tours{
     background-color: #f9f9f9; /* Fondo gris claro */
     color: var(--color-secundario);
     border-radius: 8px;
