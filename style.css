@@ -65,7 +65,7 @@ html{
 
 header {
     text-align: center;
-    background-color: none;(0, 0, 0, 0.5);
+    background-color: none(0, 0, 0, 0.5);
     color: var(--color-primario);
     padding: 1rem 0;
     position: sticky;
@@ -129,7 +129,7 @@ video {
     width: 150px; /* Tamaño de la imagen */
     height: 150px;
     object-fit: cover; /* Recorta la imagen sin deformarla */
-    border-radius: 50%; /* Hace la imagen circular */
+    border-radius: 5%; /* Hace la imagen circular */
     border: 3px solid #ddd; /* Borde sutil */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
     transition: transform 0.3s ease-in-out; /* Animación al pasar el cursor */
@@ -206,4 +206,13 @@ video {
         justify-content: center;
         gap: 2rem;
     }
+}
+
+.footer{
+    background-color: none; /* Fondo gris claro */
+    color: var(--color-secundario);
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px none(0, 0, 0, 0.2);
+    transition: transform 0.3s, background-color 0.3s;
 }
